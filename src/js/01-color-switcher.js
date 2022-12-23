@@ -1,9 +1,9 @@
 const startBtn = document.querySelector("button[data-start]");
 const stopBtn = document.querySelector("button[data-stop]");
 const bodyRef = document.querySelector("body");
-stopBtn.disabled = true;
-
 let timerId = null;
+
+stopBtn.disabled = true;
 
 startBtn.addEventListener("click", startChangingColor);
 
@@ -11,11 +11,14 @@ stopBtn.addEventListener("click", stopChangingColor);
 
 function startChangingColor() {
 
-  timerId = setInterval(() => {
-      bodyRef.style.backgroundColor = getRandomHexColor();
-      console.log(`Body color is ${bodyRef.style.backgroundColor}`);
     stopBtn.disabled = false;
     startBtn.disabled = true;
+    bodyRef.style.backgroundColor = getRandomHexColor();
+    console.log(`Body color is ${bodyRef.style.backgroundColor}`);
+    timerId = setInterval(() => {
+        bodyRef.style.backgroundColor = getRandomHexColor();
+        console.log(`Body color is ${bodyRef.style.backgroundColor}`);
+    
   }, 1000);
 
 }
