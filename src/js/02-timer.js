@@ -17,7 +17,7 @@ const options = {
   defaultDate: new Date(),
   minuteIncrement: 1,
   onClose(selectedDates) {
-    console.dir(selectedDates[0].getMilliseconds('16 March 2000'));
+    console.log("1111");
     //   let milisecs = Date(selectedDates[0]).prototype.getMilliseconds();
     //   console.log(milisecs);
 
@@ -28,6 +28,6 @@ const options = {
   },
 };
 
-const calendar = flatpickr(inputEl, options);
+// const calendar = flatpickr(inputEl, options);
 
 // console.dir(calendar.selectedDates[0].getMilliseconds(0));
