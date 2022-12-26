@@ -40,3 +40,17 @@ img {
   font-size: 13px;
   text-transform: uppercase;
 }
+
+.form {
+  display:flex;
+  gap: 10px;
+}
+
+.form input {
+  display: block;
+  max-width: 120px;
+}
+
+.form button {
+  align-self:flex-end;
+}
